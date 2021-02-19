@@ -21,8 +21,8 @@ class ViewController: UIViewController {
 
     func setUpView() {
         navigationController?.setNavigationBarHidden(true, animated: false)
-        practiceModeButton.layer.cornerRadius = 5
-        timedModeButton.layer.cornerRadius = 5
+        practiceModeButton.layer.cornerRadius = 10
+        timedModeButton.layer.cornerRadius = 10
     }
 }
 

@@ -16,13 +16,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUpView()
-    }
-
-    func setUpView() {
-        navigationController?.setNavigationBarHidden(true, animated: false)
         practiceModeButton.layer.cornerRadius = 10
         timedModeButton.layer.cornerRadius = 10
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+
 }
 

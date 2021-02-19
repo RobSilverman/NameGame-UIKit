@@ -10,11 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var practiceModeButton: UIButton!
+    @IBOutlet var timedModeButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        setUpView()
     }
 
-
+    func setUpView() {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        practiceModeButton.layer.cornerRadius = 5
+        timedModeButton.layer.cornerRadius = 5
+    }
 }
 

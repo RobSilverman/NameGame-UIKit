@@ -22,8 +22,8 @@ class API {
             }
             
             do {
-                let jsonData = try JSONDecoder().decode([Employee].self, from: data)
-                completion(jsonData, nil)
+                let parsedData = try JSONDecoder().decode([Employee].self, from: data)
+                completion(parsedData, nil)
             } catch {
                 completion(nil, error)
             }

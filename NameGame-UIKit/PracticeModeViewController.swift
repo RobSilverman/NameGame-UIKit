@@ -8,15 +8,17 @@
 
 import UIKit
 
-class PracticeMode: UIViewController {
+class PracticeModeViewController: UIViewController, GameDelegate, UICollectionViewDelegate {
     
-    var employees: [Employee] = []
+    var practiceModeGame = PracticeModeGame()
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        practiceModeGame.delegate = self
+        collectionView.delegate = self
         navigationController?.setNavigationBarHidden(false, animated: true)
         
         API.getEmployees { (data, error) in
@@ -24,11 +26,17 @@ class PracticeMode: UIViewController {
                 //Present error alert, incl. pop to home view
                 return
             }
-            self.employees += data
+            self.practiceModeGame.employees += data
             DispatchQueue.main.async {
-                //Setup collectionView here once done loading data
-                print(self.employees[0].firstName)
+                self.newQuestion()
             }
         }
     }
+    
+    func newQuestion() {
+        practiceModeGame.selectNewEmployees()
+        nameLabel.text = practiceModeGame.currentQuestion[practiceModeGame.correctAnswerIndex].fullName
+        collectionView.reloadData()
+    }
+    
 }

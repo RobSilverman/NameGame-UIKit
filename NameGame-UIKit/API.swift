@@ -23,7 +23,8 @@ class API {
             
             do {
                 let parsedData = try JSONDecoder().decode([Employee].self, from: data)
-                completion(parsedData, nil)
+                let filteredData = parsedData.filter { $0.headshot.url != nil }
+                completion(filteredData, nil)
             } catch {
                 completion(nil, error)
             }

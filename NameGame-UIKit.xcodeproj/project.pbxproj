@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9724B7EC25E0A3D7009FFFCA /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724B7EB25E0A3D7009FFFCA /* Game.swift */; };
 		9724B7F125E0A540009FFFCA /* PracticeModeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724B7F025E0A540009FFFCA /* PracticeModeGame.swift */; };
+		9724B7F625E0B0E0009FFFCA /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724B7F525E0B0E0009FFFCA /* EmployeeCell.swift */; };
 		97531CE825DF4C48005C6577 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97531CE725DF4C48005C6577 /* API.swift */; };
 		97531CED25DF4C7D005C6577 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97531CEC25DF4C7D005C6577 /* Employee.swift */; };
 		97531CF525DF5D3C005C6577 /* PracticeModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97531CF425DF5D3C005C6577 /* PracticeModeViewController.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		9724B7EB25E0A3D7009FFFCA /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		9724B7F025E0A540009FFFCA /* PracticeModeGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeModeGame.swift; sourceTree = "<group>"; };
+		9724B7F525E0B0E0009FFFCA /* EmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
 		97531CE725DF4C48005C6577 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		97531CEC25DF4C7D005C6577 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		97531CF425DF5D3C005C6577 /* PracticeModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeModeViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				97531CEC25DF4C7D005C6577 /* Employee.swift */,
 				97872FB425DF374A00FC8B65 /* Main.storyboard */,
 				97531CF425DF5D3C005C6577 /* PracticeModeViewController.swift */,
+				9724B7F525E0B0E0009FFFCA /* EmployeeCell.swift */,
 				9724B7EB25E0A3D7009FFFCA /* Game.swift */,
 				9724B7F025E0A540009FFFCA /* PracticeModeGame.swift */,
 				97872FB725DF374E00FC8B65 /* Assets.xcassets */,
@@ -277,6 +280,7 @@
 				97872FB325DF374A00FC8B65 /* ViewController.swift in Sources */,
 				97531CF525DF5D3C005C6577 /* PracticeModeViewController.swift in Sources */,
 				9724B7EC25E0A3D7009FFFCA /* Game.swift in Sources */,
+				9724B7F625E0B0E0009FFFCA /* EmployeeCell.swift in Sources */,
 				9724B7F125E0A540009FFFCA /* PracticeModeGame.swift in Sources */,
 				97872FAF25DF374A00FC8B65 /* AppDelegate.swift in Sources */,
 				97531CE825DF4C48005C6577 /* API.swift in Sources */,

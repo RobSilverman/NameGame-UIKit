@@ -17,6 +17,6 @@ struct Employee: Codable {
     }
     
     struct Headshot: Codable {
-        var url: URL?
+        var url: String?
     }
 }

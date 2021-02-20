@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PracticeModeViewController: UIViewController, GameDelegate, UICollectionViewDelegate {
+class PracticeModeViewController: UIViewController, GameDelegate {
     
     var practiceModeGame = PracticeModeGame()
     
@@ -19,6 +19,7 @@ class PracticeModeViewController: UIViewController, GameDelegate, UICollectionVi
         super.viewDidLoad()
         practiceModeGame.delegate = self
         collectionView.delegate = self
+        collectionView.dataSource = self
         navigationController?.setNavigationBarHidden(false, animated: true)
         
         API.getEmployees { (data, error) in
@@ -41,6 +42,36 @@ class PracticeModeViewController: UIViewController, GameDelegate, UICollectionVi
         practiceModeGame.selectNewEmployees()
         nameLabel.text = practiceModeGame.currentQuestion[practiceModeGame.correctAnswerIndex].fullName
         collectionView.reloadData()
+    }
+    
+}
+
+extension PracticeModeViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return practiceModeGame.currentQuestion.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PracticeCell", for: indexPath) as! EmployeeCell
+        let employee = practiceModeGame.currentQuestion[indexPath.row]
+        cell.getImage(from: employee.headshot.url!)
+
+        return cell
+    }
+}
+
+extension PracticeModeViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        //TODO: Make flexible for rotating screen
+        let sectionInsets = UIEdgeInsets(top: 24, left: 15, bottom: 105, right: 15)
+        let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout
+        let space: CGFloat = (flowLayout?.minimumInteritemSpacing ?? 0.0) + sectionInsets.left + sectionInsets.right
+        let cellViewSize = (collectionView.frame.size.width - space) / 2.0
+        let imageSize = CGSize(width: cellViewSize, height: cellViewSize)
+        return imageSize
     }
     
 }

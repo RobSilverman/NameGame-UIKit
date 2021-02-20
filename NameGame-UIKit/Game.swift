@@ -15,10 +15,6 @@ class Game {
     var currentQuestion: [Employee] = []
     var correctAnswerIndex: Int = 0
     
-    init() {
-        
-    }
-    
     func selectNewEmployees() {
         //Clear current question & select 6 new employees
         currentQuestion.removeAll()

@@ -88,7 +88,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="U70-VC-uyG"/>
                     <connections>
+                        <outlet property="instructionLabel" destination="qCo-3H-2Nc" id="Zlc-IO-KZt"/>
+                        <outlet property="logoImage" destination="iZe-7w-4yp" id="0cO-F5-SMW"/>
                         <outlet property="practiceModeButton" destination="af1-NF-ZS0" id="2Q9-zI-4pF"/>
+                        <outlet property="targetImage" destination="hrL-hV-nPw" id="BzH-dQ-U71"/>
                         <outlet property="timedModeButton" destination="T7Q-AB-xrp" id="2Xg-QK-IMA"/>
                     </connections>
                 </viewController>

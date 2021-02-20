@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol GameDelegate: class {
-    func newQuestion()
-}
-
 class Game {
     weak var delegate: GameDelegate?
     
@@ -34,4 +30,8 @@ class Game {
         //Select correct answer
         correctAnswerIndex = Int.random(in: 0...5)
     }
+}
+
+protocol GameDelegate: class {
+    func newQuestion()
 }

@@ -23,7 +23,11 @@ class PracticeModeViewController: UIViewController, GameDelegate, UICollectionVi
         
         API.getEmployees { (data, error) in
             guard let data = data, error == nil else {
-                //Present error alert, incl. pop to home view
+                let ac = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+                    self.navigationController?.popViewController(animated: true)
+                }))
+                self.present(ac, animated: true)
                 return
             }
             self.practiceModeGame.employees += data

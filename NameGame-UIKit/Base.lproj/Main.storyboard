@@ -31,23 +31,19 @@
                                     <constraint firstAttribute="width" secondItem="iZe-7w-4yp" secondAttribute="height" multiplier="1:1" id="Qcg-F5-l9z"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7Q-AB-xrp">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7Q-AB-xrp">
                                 <rect key="frame" x="8" y="806" width="398" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="MenuButtonColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="Gma-0p-5Mb"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <state key="normal" title="Timed Mode">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="af1-NF-ZS0">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="af1-NF-ZS0">
                                 <rect key="frame" x="8" y="742" width="398" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="MenuButtonColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="uhI-IC-FqP"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <state key="normal" title="Practice Mode">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -56,8 +52,9 @@
                                     <segue destination="ucA-zj-2gq" kind="show" id="ueR-WO-8aZ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try matching the WillowTree employee to their photo" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCo-3H-2Nc">
-                                <rect key="frame" x="47" y="634" width="320" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Try matching the WillowTree employee to their photo" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCo-3H-2Nc">
+                                <rect key="frame" x="47" y="634" width="310" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -65,17 +62,6 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qCo-3H-2Nc" secondAttribute="bottom" constant="187" id="9Ru-h5-fTV"/>
-                            <constraint firstItem="qCo-3H-2Nc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="9Tt-Cc-SvJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qCo-3H-2Nc" secondAttribute="trailing" constant="47" id="BgM-6x-LqF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T7Q-AB-xrp" secondAttribute="trailing" constant="8" id="X0u-yc-guE"/>
-                            <constraint firstItem="af1-NF-ZS0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="hK9-b9-9KX"/>
-                            <constraint firstItem="T7Q-AB-xrp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="kOg-hU-fLX"/>
-                            <constraint firstItem="T7Q-AB-xrp" firstAttribute="top" secondItem="af1-NF-ZS0" secondAttribute="bottom" constant="8" id="kRY-GA-xE4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="T7Q-AB-xrp" secondAttribute="bottom" id="qYC-YB-v6r"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="af1-NF-ZS0" secondAttribute="trailing" constant="8" id="rwA-8f-glW"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="U70-VC-uyG"/>
                     <connections>

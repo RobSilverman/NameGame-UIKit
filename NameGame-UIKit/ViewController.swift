@@ -21,10 +21,21 @@ class ViewController: UIViewController {
         targetImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         targetImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -50),
         targetImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 50),
-        targetImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 118),
+        targetImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 71),
         logoImage.centerXAnchor.constraint(equalTo: targetImage.centerXAnchor),
         logoImage.centerYAnchor.constraint(equalTo: targetImage.centerYAnchor),
-        logoImage.heightAnchor.constraint(equalTo: targetImage.heightAnchor, multiplier: 0.67)
+        logoImage.heightAnchor.constraint(equalTo: targetImage.heightAnchor, multiplier: 0.67),
+        timedModeButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+        timedModeButton.heightAnchor.constraint(equalToConstant: 56),
+        timedModeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
+        timedModeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8),
+        practiceModeButton.bottomAnchor.constraint(equalTo: timedModeButton.topAnchor, constant: -8),
+        practiceModeButton.heightAnchor.constraint(equalToConstant: 56),
+        practiceModeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
+        practiceModeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8),
+        instructionLabel.bottomAnchor.constraint(equalTo: practiceModeButton.topAnchor, constant: -55),
+        instructionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 47),
+        instructionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -47)
     ]}
     
     var landscapeConstraints: [NSLayoutConstraint] {[
@@ -47,12 +58,12 @@ class ViewController: UIViewController {
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        let deviceOrientation = size.width > size.height ? UIDeviceOrientation.landscapeLeft : UIDeviceOrientation.portrait
+        let deviceOrientation = UIDevice.current.orientation
         layoutViews(deviceOrientation)
     }
     
     func layoutViews(_ orientation: UIDeviceOrientation) {
-        if orientation == .landscapeLeft {
+        if orientation.isLandscape {
             //Deactivate portrait layout constraints, then activate landscape
             NSLayoutConstraint.deactivate(portraitConstraints)
             NSLayoutConstraint.activate(landscapeConstraints)

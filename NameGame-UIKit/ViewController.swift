@@ -36,6 +36,7 @@ class ViewController: UIViewController {
         practiceModeButton.bottomAnchor.constraint(equalTo: timedModeButton.topAnchor, constant: -8),
         practiceModeButton.heightAnchor.constraint(equalTo: timedModeButton.heightAnchor),
         practiceModeButton.widthAnchor.constraint(equalTo: timedModeButton.widthAnchor),
+        practiceModeButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 8),
         
         instructionLabel.bottomAnchor.constraint(equalTo: practiceModeButton.topAnchor, constant: -55),
         instructionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 47),
@@ -72,6 +73,12 @@ class ViewController: UIViewController {
         
         practiceModeButton.layer.cornerRadius = 10
         timedModeButton.layer.cornerRadius = 10
+        
+        logoImage.translatesAutoresizingMaskIntoConstraints = false
+        targetImage.translatesAutoresizingMaskIntoConstraints = false
+        instructionLabel.translatesAutoresizingMaskIntoConstraints = false
+        practiceModeButton.translatesAutoresizingMaskIntoConstraints = false
+        timedModeButton.translatesAutoresizingMaskIntoConstraints = false
         
         layoutViews(UIDevice.current.orientation)
     }

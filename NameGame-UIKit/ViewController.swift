@@ -23,7 +23,8 @@ class ViewController: UIViewController {
         targetImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 50),
         targetImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 118),
         logoImage.centerXAnchor.constraint(equalTo: targetImage.centerXAnchor),
-        logoImage.centerYAnchor.constraint(equalTo: targetImage.centerYAnchor)
+        logoImage.centerYAnchor.constraint(equalTo: targetImage.centerYAnchor),
+        logoImage.heightAnchor.constraint(equalTo: targetImage.heightAnchor, multiplier: 0.67)
     ]}
     
     var landscapeConstraints: [NSLayoutConstraint] {[

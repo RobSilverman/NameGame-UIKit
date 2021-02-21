@@ -60,6 +60,22 @@ extension PracticeModeViewController: UICollectionViewDataSource {
 
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if practiceModeGame.correctAnswerEquals(indexPath.row) {
+            //Deactivate all cells, animate correct overlay, add to score and start new question
+            collectionView.visibleCells.forEach({ $0.isUserInteractionEnabled = false })
+            let cell = collectionView.cellForItem(at: indexPath) as! EmployeeCell
+            UIView.animate(withDuration: 1, animations: cell.addCorrectOverlay)
+            print("Correct!")
+        } else {
+            //Deactivate cell, animate incorrect overlay, add to incorrect answers then end game
+            let cell = collectionView.cellForItem(at: indexPath) as! EmployeeCell
+            cell.isUserInteractionEnabled = false
+            UIView.animate(withDuration: 1, animations: cell.addIncorrectOverlay)
+            print("Incorrect!")
+        }
+    }
 }
 
 extension PracticeModeViewController: UICollectionViewDelegateFlowLayout {

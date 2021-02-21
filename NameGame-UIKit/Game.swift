@@ -26,6 +26,10 @@ class Game {
         //Select correct answer
         correctAnswerIndex = Int.random(in: 0...5)
     }
+    
+    func correctAnswerEquals(_ indexPath: Int) -> Bool {
+        return indexPath == correctAnswerIndex
+    }
 }
 
 protocol GameDelegate: class {

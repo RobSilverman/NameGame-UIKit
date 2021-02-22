@@ -10,6 +10,8 @@ import UIKit
 
 class PracticeModeViewController: UIViewController, GameDelegate {
     
+    var imageSize = CGSize(width: 0, height: 0)
+    
     var practiceModeGame = PracticeModeGame()
     
     @IBOutlet var nameLabel: UILabel!
@@ -42,6 +44,7 @@ class PracticeModeViewController: UIViewController, GameDelegate {
         practiceModeGame.selectNewEmployees()
         nameLabel.text = practiceModeGame.currentQuestion[practiceModeGame.correctAnswerIndex].fullName
         collectionView.reloadData()
+        collectionView.visibleCells.forEach({$0.isUserInteractionEnabled = true})
     }
     
     func endGame(correctAnswers: Int, incorrectAnswers: Int) {
@@ -64,7 +67,7 @@ extension PracticeModeViewController: UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PracticeCell", for: indexPath) as! EmployeeCell
         let employee = practiceModeGame.currentQuestion[indexPath.row]
-        cell.getImage(from: employee.headshot.url!)
+        cell.getImage(from: employee.headshot.url!, for: imageSize)
 
         return cell
     }
@@ -74,14 +77,18 @@ extension PracticeModeViewController: UICollectionViewDataSource {
             //Deactivate all cells, animate correct overlay, add to score and start new question
             collectionView.visibleCells.forEach({ $0.isUserInteractionEnabled = false })
             let cell = collectionView.cellForItem(at: indexPath) as! EmployeeCell
-            UIView.animate(withDuration: 1, animations: cell.addCorrectOverlay)
-            practiceModeGame.selectedCorrectAnswer()
+            UIView.animate(withDuration: 1, animations: cell.addCorrectOverlay) { _ in
+                collectionView.visibleCells.forEach({ $0.isUserInteractionEnabled = true })
+                self.practiceModeGame.selectedCorrectAnswer()
+            }
+
         } else {
             //Deactivate cell, animate incorrect overlay, add to incorrect answers then end game
             let cell = collectionView.cellForItem(at: indexPath) as! EmployeeCell
             cell.isUserInteractionEnabled = false
-            UIView.animate(withDuration: 1, animations: cell.addIncorrectOverlay)
-            practiceModeGame.selectedIncorrectAnswer()
+            UIView.animate(withDuration: 1, animations: cell.addIncorrectOverlay) { _ in
+                self.practiceModeGame.selectedIncorrectAnswer()
+            }
         }
     }
 }
@@ -94,7 +101,7 @@ extension PracticeModeViewController: UICollectionViewDelegateFlowLayout {
         let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout
         let space: CGFloat = (flowLayout?.minimumInteritemSpacing ?? 0.0) + sectionInsets.left + sectionInsets.right
         let cellViewSize = (collectionView.frame.size.width - space) / 2.0
-        let imageSize = CGSize(width: cellViewSize, height: cellViewSize)
+        imageSize = CGSize(width: cellViewSize, height: cellViewSize)
         return imageSize
     }
     

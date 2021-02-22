@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         timedModeButton.heightAnchor.constraint(equalToConstant: 56),
         timedModeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
         timedModeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8),
+        timedModeButton.widthAnchor.constraint(lessThanOrEqualToConstant: 433),
         
         practiceModeButton.bottomAnchor.constraint(equalTo: timedModeButton.topAnchor, constant: -8),
         practiceModeButton.heightAnchor.constraint(equalTo: timedModeButton.heightAnchor),
@@ -47,7 +48,7 @@ class ViewController: UIViewController {
         targetImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -50),
         targetImage.topAnchor.constraint(equalTo: view.topAnchor, constant: -50),
         targetImage.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 50),
-        targetImage.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: view.frame.width * -0.25),
+        targetImage.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: view.frame.width * -0.5),
         
         logoImage.centerXAnchor.constraint(equalTo: targetImage.centerXAnchor),
         logoImage.centerYAnchor.constraint(equalTo: targetImage.centerYAnchor),

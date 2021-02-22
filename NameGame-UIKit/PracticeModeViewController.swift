@@ -44,6 +44,14 @@ class PracticeModeViewController: UIViewController, GameDelegate {
         collectionView.reloadData()
     }
     
+    func endGame(correctAnswers: Int, incorrectAnswers: Int) {
+        let ac = UIAlertController(title: "Game Over", message: "Scored \(practiceModeGame.correctAnswers)/\(practiceModeGame.correctAnswers + practiceModeGame.incorrectAnswers)", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+            self.navigationController?.popViewController(animated: true)
+        }))
+        present(ac, animated: true)
+    }
+    
 }
 
 extension PracticeModeViewController: UICollectionViewDataSource {
@@ -67,13 +75,13 @@ extension PracticeModeViewController: UICollectionViewDataSource {
             collectionView.visibleCells.forEach({ $0.isUserInteractionEnabled = false })
             let cell = collectionView.cellForItem(at: indexPath) as! EmployeeCell
             UIView.animate(withDuration: 1, animations: cell.addCorrectOverlay)
-            print("Correct!")
+            practiceModeGame.selectedCorrectAnswer()
         } else {
             //Deactivate cell, animate incorrect overlay, add to incorrect answers then end game
             let cell = collectionView.cellForItem(at: indexPath) as! EmployeeCell
             cell.isUserInteractionEnabled = false
             UIView.animate(withDuration: 1, animations: cell.addIncorrectOverlay)
-            print("Incorrect!")
+            practiceModeGame.selectedIncorrectAnswer()
         }
     }
 }

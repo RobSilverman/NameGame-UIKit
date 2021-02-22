@@ -10,4 +10,8 @@ import UIKit
 
 class PracticeModeGame: Game {
     
+    override func selectedIncorrectAnswer() {
+        super.selectedIncorrectAnswer()
+        delegate?.endGame(correctAnswers: correctAnswers, incorrectAnswers: incorrectAnswers)
+    }
 }

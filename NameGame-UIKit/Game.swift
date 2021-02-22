@@ -15,6 +15,9 @@ class Game {
     var currentQuestion: [Employee] = []
     var correctAnswerIndex: Int = 0
     
+    var correctAnswers: Int = 0
+    var incorrectAnswers: Int = 0
+    
     func selectNewEmployees() {
         //Clear current question & select 6 new employees
         currentQuestion.removeAll()
@@ -27,6 +30,15 @@ class Game {
         correctAnswerIndex = Int.random(in: 0...5)
     }
     
+    func selectedCorrectAnswer() {
+        correctAnswers += 1
+        delegate?.newQuestion()
+    }
+    
+    func selectedIncorrectAnswer() {
+        incorrectAnswers += 1
+    }
+    
     func correctAnswerEquals(_ indexPath: Int) -> Bool {
         return indexPath == correctAnswerIndex
     }
@@ -34,4 +46,5 @@ class Game {
 
 protocol GameDelegate: class {
     func newQuestion()
+    func endGame(correctAnswers:Int, incorrectAnswers:Int)
 }

@@ -16,6 +16,7 @@ class TimedModeViewController: UIViewController, GameDelegate {
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var timerView: TimerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +57,8 @@ class TimedModeViewController: UIViewController, GameDelegate {
     }
     
     func redrawCircle(proportionComplete: Double) {
-        //This is a placeholder function here, used in the TimedModeViewController
+        timerView.currentProgress = proportionComplete
+        timerView.setNeedsDisplay()
     }
     
 }

@@ -12,6 +12,7 @@
 		9724B7F625E0B0E0009FFFCA /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724B7F525E0B0E0009FFFCA /* EmployeeCell.swift */; };
 		9724B7FB25E452E0009FFFCA /* TimedModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724B7FA25E452E0009FFFCA /* TimedModeViewController.swift */; };
 		9724B80025E4544E009FFFCA /* TimedModeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724B7FF25E4544E009FFFCA /* TimedModeGame.swift */; };
+		9724B80525E467C6009FFFCA /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724B80425E467C6009FFFCA /* TimerView.swift */; };
 		97531CE825DF4C48005C6577 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97531CE725DF4C48005C6577 /* API.swift */; };
 		97531CED25DF4C7D005C6577 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97531CEC25DF4C7D005C6577 /* Employee.swift */; };
 		97531CF525DF5D3C005C6577 /* PracticeModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97531CF425DF5D3C005C6577 /* PracticeModeViewController.swift */; };
@@ -48,6 +49,7 @@
 		9724B7F525E0B0E0009FFFCA /* EmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
 		9724B7FA25E452E0009FFFCA /* TimedModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimedModeViewController.swift; sourceTree = "<group>"; };
 		9724B7FF25E4544E009FFFCA /* TimedModeGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimedModeGame.swift; sourceTree = "<group>"; };
+		9724B80425E467C6009FFFCA /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		97531CE725DF4C48005C6577 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		97531CEC25DF4C7D005C6577 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		97531CF425DF5D3C005C6577 /* PracticeModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeModeViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				97531CF425DF5D3C005C6577 /* PracticeModeViewController.swift */,
 				9724B7FA25E452E0009FFFCA /* TimedModeViewController.swift */,
 				9724B7FF25E4544E009FFFCA /* TimedModeGame.swift */,
+				9724B80425E467C6009FFFCA /* TimerView.swift */,
 				9724B7F525E0B0E0009FFFCA /* EmployeeCell.swift */,
 				9724B7EB25E0A3D7009FFFCA /* Game.swift */,
 				9724B7F025E0A540009FFFCA /* PracticeModeGame.swift */,
@@ -289,6 +292,7 @@
 				9724B7EC25E0A3D7009FFFCA /* Game.swift in Sources */,
 				9724B7FB25E452E0009FFFCA /* TimedModeViewController.swift in Sources */,
 				9724B7F625E0B0E0009FFFCA /* EmployeeCell.swift in Sources */,
+				9724B80525E467C6009FFFCA /* TimerView.swift in Sources */,
 				9724B7F125E0A540009FFFCA /* PracticeModeGame.swift in Sources */,
 				97872FAF25DF374A00FC8B65 /* AppDelegate.swift in Sources */,
 				97531CE825DF4C48005C6577 /* API.swift in Sources */,

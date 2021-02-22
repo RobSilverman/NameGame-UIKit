@@ -105,8 +105,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iY9-5f-9N1">
-                                <rect key="frame" x="143.5" y="118" width="127.5" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iY9-5f-9N1">
+                                <rect key="frame" x="10" y="118" width="394" height="41"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -173,11 +173,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="tfS-T6-eD1" firstAttribute="bottom" secondItem="06I-wR-fMD" secondAttribute="bottom" id="0KW-Er-OHr"/>
+                            <constraint firstItem="iY9-5f-9N1" firstAttribute="leading" secondItem="tfS-T6-eD1" secondAttribute="leading" constant="10" id="5WC-TY-Ibc"/>
                             <constraint firstItem="06I-wR-fMD" firstAttribute="leading" secondItem="tfS-T6-eD1" secondAttribute="leading" id="5qe-LA-nAO"/>
                             <constraint firstItem="06I-wR-fMD" firstAttribute="top" secondItem="iY9-5f-9N1" secondAttribute="bottom" constant="24" id="8ix-zQ-P8F"/>
                             <constraint firstItem="iY9-5f-9N1" firstAttribute="top" secondItem="tfS-T6-eD1" secondAttribute="top" constant="30" id="Wid-Dz-TGm"/>
                             <constraint firstItem="tfS-T6-eD1" firstAttribute="trailing" secondItem="06I-wR-fMD" secondAttribute="trailing" id="axS-YG-Tw7"/>
                             <constraint firstItem="iY9-5f-9N1" firstAttribute="centerX" secondItem="tfS-T6-eD1" secondAttribute="centerX" id="dvC-Xj-vTa"/>
+                            <constraint firstItem="tfS-T6-eD1" firstAttribute="trailing" secondItem="iY9-5f-9N1" secondAttribute="trailing" constant="10" id="oKb-48-ulT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Practice Mode" id="Dec-Nx-QSG"/>
@@ -198,8 +200,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgj-Go-hPI">
-                                <rect key="frame" x="143.5" y="118" width="127.5" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qgj-Go-hPI">
+                                <rect key="frame" x="10" y="118" width="394" height="41"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -261,13 +263,25 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJU-4W-EC3" customClass="TimerView" customModule="NameGame_UIKit" customModuleProvider="target">
+                                <rect key="frame" x="370" y="110" width="22" height="22"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="6Nw-VZ-tS2"/>
+                                    <constraint firstAttribute="width" constant="22" id="8HV-3n-Fyy"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QHF-LD-UP3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="QHF-LD-UP3" firstAttribute="trailing" secondItem="fJU-4W-EC3" secondAttribute="trailing" constant="22" id="4Hk-Fv-Bff"/>
                             <constraint firstItem="Qgj-Go-hPI" firstAttribute="top" secondItem="QHF-LD-UP3" secondAttribute="top" constant="30" id="DAR-qQ-vn0"/>
                             <constraint firstItem="QHF-LD-UP3" firstAttribute="trailing" secondItem="GlF-JT-sHb" secondAttribute="trailing" id="LaR-3X-vpu"/>
+                            <constraint firstItem="Qgj-Go-hPI" firstAttribute="leading" secondItem="QHF-LD-UP3" secondAttribute="leading" constant="10" id="OYV-io-01L"/>
                             <constraint firstItem="GlF-JT-sHb" firstAttribute="leading" secondItem="QHF-LD-UP3" secondAttribute="leading" id="Ua0-7m-cDB"/>
+                            <constraint firstItem="fJU-4W-EC3" firstAttribute="top" secondItem="QHF-LD-UP3" secondAttribute="top" constant="22" id="YvI-u3-sAd"/>
+                            <constraint firstItem="QHF-LD-UP3" firstAttribute="trailing" secondItem="Qgj-Go-hPI" secondAttribute="trailing" constant="10" id="ada-N2-VcY"/>
                             <constraint firstItem="QHF-LD-UP3" firstAttribute="bottom" secondItem="GlF-JT-sHb" secondAttribute="bottom" id="lrL-NV-kiv"/>
                             <constraint firstItem="Qgj-Go-hPI" firstAttribute="centerX" secondItem="QHF-LD-UP3" secondAttribute="centerX" id="tDm-S3-88O"/>
                             <constraint firstItem="GlF-JT-sHb" firstAttribute="top" secondItem="Qgj-Go-hPI" secondAttribute="bottom" constant="24" id="xsc-ak-g2Q"/>
@@ -277,11 +291,12 @@
                     <connections>
                         <outlet property="collectionView" destination="GlF-JT-sHb" id="H6h-b6-eLL"/>
                         <outlet property="nameLabel" destination="Qgj-Go-hPI" id="b1Q-Fy-HCa"/>
+                        <outlet property="timerView" destination="fJU-4W-EC3" id="09p-ex-GyO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJ3-go-1K4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2038" y="507"/>
+            <point key="canvasLocation" x="2037.68115942029" y="506.91964285714283"/>
         </scene>
     </scenes>
     <resources>

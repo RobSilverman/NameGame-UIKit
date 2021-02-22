@@ -39,6 +39,9 @@
                                 <state key="normal" title="Timed Mode">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="0dk-1e-fdV" kind="show" id="OqD-jC-tMA"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Try matching the WillowTree employee to their photo" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCo-3H-2Nc">
                                 <rect key="frame" x="52" y="634" width="310" height="41"/>
@@ -185,7 +188,100 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vbb-Sx-ziN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2000.0000000000002" y="137.94642857142856"/>
+            <point key="canvasLocation" x="2038" y="-165"/>
+        </scene>
+        <!--Timed Mode-->
+        <scene sceneID="sUW-pb-yFg">
+            <objects>
+                <viewController id="0dk-1e-fdV" customClass="TimedModeViewController" customModule="NameGame_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jGB-a5-eYh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgj-Go-hPI">
+                                <rect key="frame" x="143.5" y="118" width="127.5" height="41"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GlF-JT-sHb">
+                                <rect key="frame" x="0.0" y="183" width="414" height="679"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UNV-CR-0gf">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PracticeCell" id="4i6-xX-Bud" customClass="EmployeeCell" customModule="NameGame_UIKit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="iFa-dx-cvL">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cgr-Sh-ujH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Correct" translatesAutoresizingMaskIntoConstraints="NO" id="bwL-1r-bdL">
+                                                    <rect key="frame" x="-10" y="-10" width="148" height="148"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Incorrect" translatesAutoresizingMaskIntoConstraints="NO" id="lha-zK-vSb">
+                                                    <rect key="frame" x="-10" y="-10" width="148" height="148"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="lha-zK-vSb" secondAttribute="trailing" constant="-10" id="1TA-0v-qWa"/>
+                                                <constraint firstItem="lha-zK-vSb" firstAttribute="centerX" secondItem="iFa-dx-cvL" secondAttribute="centerX" id="8P0-Kg-FII"/>
+                                                <constraint firstAttribute="bottom" secondItem="lha-zK-vSb" secondAttribute="bottom" constant="-10" id="Crp-3g-xMJ"/>
+                                                <constraint firstItem="cgr-Sh-ujH" firstAttribute="top" secondItem="iFa-dx-cvL" secondAttribute="top" id="H0T-bw-7lb"/>
+                                                <constraint firstItem="cgr-Sh-ujH" firstAttribute="centerY" secondItem="iFa-dx-cvL" secondAttribute="centerY" id="JqH-fE-ijF"/>
+                                                <constraint firstItem="cgr-Sh-ujH" firstAttribute="centerX" secondItem="iFa-dx-cvL" secondAttribute="centerX" id="NEb-iX-x6F"/>
+                                                <constraint firstItem="lha-zK-vSb" firstAttribute="centerY" secondItem="iFa-dx-cvL" secondAttribute="centerY" id="NFA-oK-ukk"/>
+                                                <constraint firstItem="bwL-1r-bdL" firstAttribute="top" secondItem="iFa-dx-cvL" secondAttribute="top" constant="-10" id="SaI-js-Ng9"/>
+                                                <constraint firstAttribute="bottom" secondItem="bwL-1r-bdL" secondAttribute="bottom" constant="-10" id="YsB-7W-cc6"/>
+                                                <constraint firstAttribute="bottom" secondItem="cgr-Sh-ujH" secondAttribute="bottom" id="Zkw-Dn-hmg"/>
+                                                <constraint firstItem="bwL-1r-bdL" firstAttribute="centerX" secondItem="iFa-dx-cvL" secondAttribute="centerX" id="bU0-Yb-y0y"/>
+                                                <constraint firstItem="bwL-1r-bdL" firstAttribute="leading" secondItem="iFa-dx-cvL" secondAttribute="leading" constant="-10" id="dvS-ye-zAQ"/>
+                                                <constraint firstItem="lha-zK-vSb" firstAttribute="top" secondItem="iFa-dx-cvL" secondAttribute="top" constant="-10" id="hzp-gA-mqw"/>
+                                                <constraint firstItem="cgr-Sh-ujH" firstAttribute="leading" secondItem="iFa-dx-cvL" secondAttribute="leading" id="j2y-Vb-zNe"/>
+                                                <constraint firstItem="lha-zK-vSb" firstAttribute="leading" secondItem="iFa-dx-cvL" secondAttribute="leading" constant="-10" id="nIw-Nd-kfN"/>
+                                                <constraint firstItem="bwL-1r-bdL" firstAttribute="centerY" secondItem="iFa-dx-cvL" secondAttribute="centerY" id="p29-t3-7Ef"/>
+                                                <constraint firstAttribute="trailing" secondItem="cgr-Sh-ujH" secondAttribute="trailing" id="pDo-zR-U6b"/>
+                                                <constraint firstAttribute="trailing" secondItem="bwL-1r-bdL" secondAttribute="trailing" constant="-10" id="z6G-oa-yA6"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="128" height="128"/>
+                                        <connections>
+                                            <outlet property="correctOverlay" destination="bwL-1r-bdL" id="nG2-8U-wEa"/>
+                                            <outlet property="employeeImage" destination="cgr-Sh-ujH" id="AMV-2O-vyT"/>
+                                            <outlet property="incorrectOverlay" destination="lha-zK-vSb" id="X97-pb-Jq2"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QHF-LD-UP3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qgj-Go-hPI" firstAttribute="top" secondItem="QHF-LD-UP3" secondAttribute="top" constant="30" id="DAR-qQ-vn0"/>
+                            <constraint firstItem="QHF-LD-UP3" firstAttribute="trailing" secondItem="GlF-JT-sHb" secondAttribute="trailing" id="LaR-3X-vpu"/>
+                            <constraint firstItem="GlF-JT-sHb" firstAttribute="leading" secondItem="QHF-LD-UP3" secondAttribute="leading" id="Ua0-7m-cDB"/>
+                            <constraint firstItem="QHF-LD-UP3" firstAttribute="bottom" secondItem="GlF-JT-sHb" secondAttribute="bottom" id="lrL-NV-kiv"/>
+                            <constraint firstItem="Qgj-Go-hPI" firstAttribute="centerX" secondItem="QHF-LD-UP3" secondAttribute="centerX" id="tDm-S3-88O"/>
+                            <constraint firstItem="GlF-JT-sHb" firstAttribute="top" secondItem="Qgj-Go-hPI" secondAttribute="bottom" constant="24" id="xsc-ak-g2Q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Timed Mode" id="AS4-ko-SQF"/>
+                    <connections>
+                        <outlet property="collectionView" destination="GlF-JT-sHb" id="H6h-b6-eLL"/>
+                        <outlet property="nameLabel" destination="Qgj-Go-hPI" id="b1Q-Fy-HCa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jJ3-go-1K4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2038" y="507"/>
         </scene>
     </scenes>
     <resources>

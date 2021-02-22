@@ -46,5 +46,6 @@ class Game {
 
 protocol GameDelegate: class {
     func newQuestion()
-    func endGame(correctAnswers:Int, incorrectAnswers:Int)
+    func endGame(correctAnswers: Int, incorrectAnswers: Int)
+    func redrawCircle(proportionComplete: Double)
 }

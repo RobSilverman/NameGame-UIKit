@@ -108,7 +108,11 @@ extension PracticeModeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+        if UIDevice.current.orientation.isLandscape {
+            return UIEdgeInsets(top: 15, left: 0, bottom: 15, right: 0)
+        } else {
+            return UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+        }
     }
     
 }

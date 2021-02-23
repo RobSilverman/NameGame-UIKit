@@ -10,7 +10,8 @@ import UIKit
 
 class TimerView: UIView {
     
-    var currentProgress: Double = 0
+    // Set to a very small decimal due to the circle's first draw animating as fully-drawn if 0
+    var currentProgress: Double = 0.000001
 
     override func draw(_ rect: CGRect) {
         if let context = UIGraphicsGetCurrentContext() {

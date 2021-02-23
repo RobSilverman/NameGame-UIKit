@@ -2,7 +2,7 @@
 
 ## About the Project
 
-This project was created as an interview project for [WillowTree](https://willowtreeapps.com/). I built this final version using UIKit, but I did some exploratory work on a [SwiftUI version](https://github.com/RobSilverman/NameGame-SwiftUI) as well!
+This project was created as an interview project for [WillowTree](https://willowtreeapps.com/). I built this final version using UIKit, but I did some exploratory work on a [SwiftUI version](https://github.com/RobSilverman/NameGame-SwiftUI) as well! Unit tests for the main `Game` class are included.
 
 ## Usage
 
@@ -16,6 +16,7 @@ If I had more time to focus on this project, some of the first things I'd contin
 * Auto-layout improvements- portrait views are working well but adapting to landscape (with different layouts depending on size class) has proven challenging.
 * Refactor view controllers- I architected the view controllers to be functionally identical so that with a little more learning, they could be a single view controller with replacable Game controllers.
 * TimerView as! BarButtonItem- I tried to add the custom TimerView as the rightBarButtonItem in Timed Mode, but doing so crashed the app. If I had more time, I'd look into the issue (something to do with key value-coding compliance) and move the timer from the main layout to the nav bar.
+* UI Tests- a good UI test for this app would require significant mocked data, so I chose to instead spend my limited time on the unit tests.
 
 ## Contact
 

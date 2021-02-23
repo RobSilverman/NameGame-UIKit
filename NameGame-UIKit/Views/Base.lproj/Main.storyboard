@@ -36,11 +36,24 @@
                                 <color key="backgroundColor" name="MenuButtonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="SMb-99-GX4"/>
+                                    <constraint firstAttribute="width" constant="99" id="nmo-Se-j8A">
+                                        <variation key="heightClass=compact" constant="359"/>
+                                    </constraint>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <state key="normal" title="Timed Mode">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="nmo-Se-j8A"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="nmo-Se-j8A"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <segue destination="0dk-1e-fdV" kind="show" id="OqD-jC-tMA"/>
                                 </connections>
@@ -58,12 +71,25 @@
                                 <rect key="frame" x="8" y="742" width="398" height="56"/>
                                 <color key="backgroundColor" name="MenuButtonColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="fGd-6h-GfT">
+                                        <variation key="heightClass=compact" constant="359"/>
+                                    </constraint>
                                     <constraint firstAttribute="height" constant="56" id="wxJ-vV-6EV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <state key="normal" title="Practice Mode">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="fGd-6h-GfT"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="fGd-6h-GfT"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <segue destination="ucA-zj-2gq" kind="show" id="ueR-WO-8aZ"/>
                                 </connections>
@@ -73,21 +99,67 @@
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="T7Q-AB-xrp" firstAttribute="top" secondItem="af1-NF-ZS0" secondAttribute="bottom" constant="8" symbolic="YES" id="34X-QV-FgI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qCo-3H-2Nc" secondAttribute="trailing" constant="249" id="6Tu-Bw-ibd">
+                                <variation key="heightClass=compact" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="hrL-hV-nPw" secondAttribute="leading" constant="50" id="BSR-Wq-uTg">
+                                <variation key="heightClass=compact" constant="50"/>
+                            </constraint>
                             <constraint firstItem="hrL-hV-nPw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Gg5-8y-JAO"/>
+                            <constraint firstItem="iZe-7w-4yp" firstAttribute="centerY" secondItem="hrL-hV-nPw" secondAttribute="centerY" id="Ii5-bN-xLB"/>
                             <constraint firstItem="iZe-7w-4yp" firstAttribute="centerY" secondItem="hrL-hV-nPw" secondAttribute="centerY" id="IrG-Ob-ULn"/>
                             <constraint firstItem="af1-NF-ZS0" firstAttribute="top" secondItem="qCo-3H-2Nc" secondAttribute="bottom" constant="67" id="JnV-nS-jua"/>
+                            <constraint firstItem="hrL-hV-nPw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Ljw-ed-9bh">
+                                <variation key="heightClass=compact" constant="-50"/>
+                            </constraint>
                             <constraint firstItem="qCo-3H-2Nc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Plh-id-1lP"/>
                             <constraint firstItem="hrL-hV-nPw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Q7g-W3-uYB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="T7Q-AB-xrp" secondAttribute="bottom" id="RfW-NW-sOE"/>
                             <constraint firstItem="iZe-7w-4yp" firstAttribute="centerX" secondItem="hrL-hV-nPw" secondAttribute="centerX" id="SBS-aR-IhB"/>
                             <constraint firstItem="T7Q-AB-xrp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="SgL-KO-nsf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hrL-hV-nPw" secondAttribute="bottom" constant="28" id="UA9-EK-lIc">
+                                <variation key="heightClass=compact" constant="-50"/>
+                            </constraint>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T7Q-AB-xrp" secondAttribute="trailing" constant="8" id="XXl-EL-Y83"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="af1-NF-ZS0" secondAttribute="trailing" constant="8" id="ZLR-li-Wk2"/>
+                            <constraint firstItem="iZe-7w-4yp" firstAttribute="centerX" secondItem="hrL-hV-nPw" secondAttribute="centerX" id="bMC-k1-09W"/>
                             <constraint firstItem="af1-NF-ZS0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="fu1-x9-rSg"/>
                             <constraint firstItem="hrL-hV-nPw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="50" id="m2d-W4-eut"/>
                             <constraint firstItem="hrL-hV-nPw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-50" id="mTC-oq-csg"/>
+                            <constraint firstItem="qCo-3H-2Nc" firstAttribute="centerX" secondItem="af1-NF-ZS0" secondAttribute="centerX" id="tMX-xu-Jz4"/>
                             <constraint firstItem="iZe-7w-4yp" firstAttribute="height" secondItem="hrL-hV-nPw" secondAttribute="height" multiplier="0.67" id="taR-zx-AdJ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6Tu-Bw-ibd"/>
+                                <exclude reference="BSR-Wq-uTg"/>
+                                <exclude reference="UA9-EK-lIc"/>
+                                <exclude reference="Ljw-ed-9bh"/>
+                                <exclude reference="Ii5-bN-xLB"/>
+                                <exclude reference="bMC-k1-09W"/>
+                                <exclude reference="tMX-xu-Jz4"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="6Tu-Bw-ibd"/>
+                                <include reference="BSR-Wq-uTg"/>
+                                <include reference="UA9-EK-lIc"/>
+                                <exclude reference="Gg5-8y-JAO"/>
+                                <include reference="Ljw-ed-9bh"/>
+                                <exclude reference="Q7g-W3-uYB"/>
+                                <exclude reference="m2d-W4-eut"/>
+                                <exclude reference="mTC-oq-csg"/>
+                                <include reference="Ii5-bN-xLB"/>
+                                <exclude reference="IrG-Ob-ULn"/>
+                                <exclude reference="SBS-aR-IhB"/>
+                                <include reference="bMC-k1-09W"/>
+                                <exclude reference="Plh-id-1lP"/>
+                                <include reference="tMX-xu-Jz4"/>
+                                <exclude reference="fu1-x9-rSg"/>
+                                <exclude reference="SgL-KO-nsf"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="U70-VC-uyG"/>
                     <nil key="simulatedTopBarMetrics"/>

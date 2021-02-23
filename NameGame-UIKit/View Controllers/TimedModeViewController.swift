@@ -103,11 +103,8 @@ extension TimedModeViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         //TODO: Make flexible for rotating screen
-        let sectionInsets = UIEdgeInsets(top: 24, left: 15, bottom: 105, right: 15)
-        let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout
-        let space: CGFloat = (flowLayout?.minimumInteritemSpacing ?? 10.0) + sectionInsets.left + sectionInsets.right
-        let cellViewSize = (collectionView.frame.size.width - space) / 2.0
-        imageSize = CGSize(width: cellViewSize - 10, height: cellViewSize - 10)
+        let dimension = UIDevice.current.orientation.isLandscape ? (collectionView.bounds.width / 3) - 40 : (collectionView.bounds.width / 2) - 30
+        imageSize = CGSize(width: dimension, height: dimension)
         return imageSize
     }
     

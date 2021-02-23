@@ -94,6 +94,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9724B80C25E4A4E6009FFFCA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				97872FB425DF374A00FC8B65 /* Main.storyboard */,
+				97872FB925DF374E00FC8B65 /* LaunchScreen.storyboard */,
+				9724B7F525E0B0E0009FFFCA /* EmployeeCell.swift */,
+				9724B80425E467C6009FFFCA /* TimerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9724B80D25E4A4F2009FFFCA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				97531CEC25DF4C7D005C6577 /* Employee.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9724B80E25E4A53A009FFFCA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				97872FB225DF374A00FC8B65 /* ViewController.swift */,
+				97531CF425DF5D3C005C6577 /* PracticeModeViewController.swift */,
+				9724B7FA25E452E0009FFFCA /* TimedModeViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9724B80F25E4A56D009FFFCA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				97531CE725DF4C48005C6577 /* API.swift */,
+				9724B7EB25E0A3D7009FFFCA /* Game.swift */,
+				9724B7F025E0A540009FFFCA /* PracticeModeGame.swift */,
+				9724B7FF25E4544E009FFFCA /* TimedModeGame.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		97872FA225DF374A00FC8B65 = {
 			isa = PBXGroup;
 			children = (
@@ -119,19 +159,11 @@
 			children = (
 				97872FAE25DF374A00FC8B65 /* AppDelegate.swift */,
 				97872FB025DF374A00FC8B65 /* SceneDelegate.swift */,
-				97872FB225DF374A00FC8B65 /* ViewController.swift */,
-				97531CE725DF4C48005C6577 /* API.swift */,
-				97531CEC25DF4C7D005C6577 /* Employee.swift */,
-				97872FB425DF374A00FC8B65 /* Main.storyboard */,
-				97531CF425DF5D3C005C6577 /* PracticeModeViewController.swift */,
-				9724B7FA25E452E0009FFFCA /* TimedModeViewController.swift */,
-				9724B7FF25E4544E009FFFCA /* TimedModeGame.swift */,
-				9724B80425E467C6009FFFCA /* TimerView.swift */,
-				9724B7F525E0B0E0009FFFCA /* EmployeeCell.swift */,
-				9724B7EB25E0A3D7009FFFCA /* Game.swift */,
-				9724B7F025E0A540009FFFCA /* PracticeModeGame.swift */,
 				97872FB725DF374E00FC8B65 /* Assets.xcassets */,
-				97872FB925DF374E00FC8B65 /* LaunchScreen.storyboard */,
+				9724B80E25E4A53A009FFFCA /* View Controllers */,
+				9724B80D25E4A4F2009FFFCA /* Models */,
+				9724B80C25E4A4E6009FFFCA /* Views */,
+				9724B80F25E4A56D009FFFCA /* Controllers */,
 				97872FBC25DF374E00FC8B65 /* Info.plist */,
 			);
 			path = "NameGame-UIKit";

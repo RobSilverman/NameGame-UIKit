@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GYp-bS-EPy">
-    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <device id="retina6_7" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -15,24 +15,24 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NameGame_UIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="926" height="428"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="target" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hrL-hV-nPw">
-                                <rect key="frame" x="-50" y="50.5" width="868" height="868.5"/>
+                                <rect key="frame" x="-6" y="-49.5" width="506" height="506"/>
                                 <color key="tintColor" name="TargetColorTop"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hrL-hV-nPw" secondAttribute="height" multiplier="514:515" id="Xxp-KT-bHq"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="iZe-7w-4yp">
-                                <rect key="frame" x="92.5" y="193.5" width="583" height="582.5"/>
+                                <rect key="frame" x="77" y="33.666666666666657" width="340" height="339.66666666666674"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="iZe-7w-4yp" secondAttribute="height" multiplier="1:1" id="Qcg-F5-l9z"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7Q-AB-xrp">
-                                <rect key="frame" x="8" y="968" width="752" height="56"/>
+                                <rect key="frame" x="515" y="351" width="359" height="56"/>
                                 <color key="backgroundColor" name="MenuButtonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" priority="999" constant="433" id="4ro-TN-vXf"/>
@@ -60,7 +60,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try matching the WillowTree employee to their photo" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCo-3H-2Nc">
-                                <rect key="frame" x="229" y="796" width="310" height="41"/>
+                                <rect key="frame" x="539.66666666666663" y="179.33333333333334" width="310" height="40.666666666666657"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="310" id="5Db-tL-aXs"/>
                                 </constraints>
@@ -69,7 +69,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="af1-NF-ZS0">
-                                <rect key="frame" x="8" y="904" width="752" height="56"/>
+                                <rect key="frame" x="515" y="287" width="359" height="56"/>
                                 <color key="backgroundColor" name="MenuButtonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="115" id="fGd-6h-GfT">
@@ -107,6 +107,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="hrL-hV-nPw" secondAttribute="leading" constant="50" id="BSR-Wq-uTg">
                                 <variation key="heightClass=compact" constant="50"/>
                             </constraint>
+                            <constraint firstItem="af1-NF-ZS0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="C3A-KT-Dap"/>
                             <constraint firstItem="hrL-hV-nPw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Gg5-8y-JAO"/>
                             <constraint firstItem="iZe-7w-4yp" firstAttribute="centerY" secondItem="hrL-hV-nPw" secondAttribute="centerY" id="Ii5-bN-xLB"/>
                             <constraint firstItem="iZe-7w-4yp" firstAttribute="centerY" secondItem="hrL-hV-nPw" secondAttribute="centerY" id="IrG-Ob-ULn"/>
@@ -118,14 +119,15 @@
                             <constraint firstItem="hrL-hV-nPw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Q7g-W3-uYB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="T7Q-AB-xrp" secondAttribute="bottom" id="RfW-NW-sOE"/>
                             <constraint firstItem="iZe-7w-4yp" firstAttribute="centerX" secondItem="hrL-hV-nPw" secondAttribute="centerX" id="SBS-aR-IhB"/>
-                            <constraint firstItem="T7Q-AB-xrp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="SgL-KO-nsf"/>
+                            <constraint firstItem="T7Q-AB-xrp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="998" constant="8" id="SgL-KO-nsf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hrL-hV-nPw" secondAttribute="bottom" constant="28" id="UA9-EK-lIc">
                                 <variation key="heightClass=compact" constant="-50"/>
                             </constraint>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T7Q-AB-xrp" secondAttribute="trailing" constant="8" id="XXl-EL-Y83"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="af1-NF-ZS0" secondAttribute="trailing" constant="8" id="ZLR-li-Wk2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T7Q-AB-xrp" secondAttribute="trailing" priority="998" constant="8" id="XXl-EL-Y83"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="af1-NF-ZS0" secondAttribute="trailing" priority="998" constant="8" id="ZLR-li-Wk2"/>
                             <constraint firstItem="iZe-7w-4yp" firstAttribute="centerX" secondItem="hrL-hV-nPw" secondAttribute="centerX" id="bMC-k1-09W"/>
-                            <constraint firstItem="af1-NF-ZS0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="fu1-x9-rSg"/>
+                            <constraint firstItem="T7Q-AB-xrp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ck3-9a-76w"/>
+                            <constraint firstItem="af1-NF-ZS0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="998" constant="8" id="fu1-x9-rSg"/>
                             <constraint firstItem="hrL-hV-nPw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="50" id="m2d-W4-eut"/>
                             <constraint firstItem="hrL-hV-nPw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-50" id="mTC-oq-csg"/>
                             <constraint firstItem="qCo-3H-2Nc" firstAttribute="centerX" secondItem="af1-NF-ZS0" secondAttribute="centerX" id="tMX-xu-Jz4"/>
@@ -140,6 +142,8 @@
                                 <exclude reference="Ii5-bN-xLB"/>
                                 <exclude reference="bMC-k1-09W"/>
                                 <exclude reference="tMX-xu-Jz4"/>
+                                <exclude reference="C3A-KT-Dap"/>
+                                <exclude reference="ck3-9a-76w"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -160,6 +164,18 @@
                                 <include reference="tMX-xu-Jz4"/>
                                 <exclude reference="fu1-x9-rSg"/>
                                 <exclude reference="SgL-KO-nsf"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="C3A-KT-Dap"/>
+                                <include reference="ck3-9a-76w"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="C3A-KT-Dap"/>
+                                <exclude reference="ck3-9a-76w"/>
                             </mask>
                         </variation>
                     </view>
@@ -183,7 +199,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GYp-bS-EPy" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3cs-Rt-7h6">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="926" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -200,11 +216,11 @@
             <objects>
                 <viewController id="ucA-zj-2gq" customClass="PracticeModeViewController" customModule="NameGame_UIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sDC-vb-R8L">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="926" height="428"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="06I-wR-fMD">
-                                <rect key="frame" x="0.0" y="95" width="768" height="929"/>
+                                <rect key="frame" x="261.33333333333331" y="0.0" width="620.66666666666674" height="407"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sDd-zl-ul2">
                                     <size key="itemSize" width="128" height="128"/>
@@ -261,7 +277,7 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iY9-5f-9N1">
-                                <rect key="frame" x="10" y="30" width="748" height="41"/>
+                                <rect key="frame" x="84" y="70" width="127.33333333333331" height="41"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -327,17 +343,17 @@
             <objects>
                 <viewController id="0dk-1e-fdV" customClass="TimedModeViewController" customModule="NameGame_UIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jGB-a5-eYh">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="926" height="428"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qgj-Go-hPI">
-                                <rect key="frame" x="10" y="30" width="748" height="41"/>
+                                <rect key="frame" x="84" y="75" width="127.33333333333331" height="40.666666666666657"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GlF-JT-sHb">
-                                <rect key="frame" x="0.0" y="95" width="768" height="929"/>
+                                <rect key="frame" x="261.33333333333331" y="0.0" width="620.66666666666674" height="407"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UNV-CR-0gf">
                                     <size key="itemSize" width="128" height="128"/>
@@ -394,7 +410,7 @@
                                 </cells>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJU-4W-EC3" customClass="TimerView" customModule="NameGame_UIKit" customModuleProvider="target">
-                                <rect key="frame" x="724" y="22" width="22" height="22"/>
+                                <rect key="frame" x="66" y="22" width="22" height="22"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="6Nw-VZ-tS2"/>

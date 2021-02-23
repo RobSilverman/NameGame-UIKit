@@ -10,18 +10,47 @@ import XCTest
 @testable import NameGame_UIKit
 
 class NameGame_UIKitTests: XCTestCase {
+    
+    var game: Game?
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        game = Game()
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        game = nil
+    }
+    
+    func testCorrectAnswerEquating() {
+        game?.correctAnswerIndex = 3
+        XCTAssertTrue(game!.correctAnswerEquals(3))
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testInitialData() {
+        XCTAssertEqual(game?.correctAnswers, 0)
+        XCTAssertEqual(game?.incorrectAnswers, 0)
+    }
+    
+    func testSelectedCorrect() {
+        game?.selectedCorrectAnswer()
+        XCTAssertEqual(game?.correctAnswers, 1)
+        XCTAssertEqual(game?.incorrectAnswers, 0)
+        
+        game?.selectedCorrectAnswer()
+        game?.selectedCorrectAnswer()
+        XCTAssertEqual(game?.correctAnswers, 3)
+        XCTAssertEqual(game?.incorrectAnswers, 0)
+    }
+    
+    func testSelectedIncorrect() {
+        game?.selectedIncorrectAnswer()
+        XCTAssertEqual(game?.correctAnswers, 0)
+        XCTAssertEqual(game?.incorrectAnswers, 1)
+        
+        game?.selectedIncorrectAnswer()
+        game?.selectedIncorrectAnswer()
+        XCTAssertEqual(game?.correctAnswers, 0)
+        XCTAssertEqual(game?.incorrectAnswers, 3)
     }
 
     func testPerformanceExample() {

@@ -103,9 +103,9 @@ extension PracticeModeViewController: UICollectionViewDelegateFlowLayout {
         //TODO: Make flexible for rotating screen
         let sectionInsets = UIEdgeInsets(top: 24, left: 15, bottom: 105, right: 15)
         let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout
-        let space: CGFloat = (flowLayout?.minimumInteritemSpacing ?? 0.0) + sectionInsets.left + sectionInsets.right
+        let space: CGFloat = (flowLayout?.minimumInteritemSpacing ?? 10.0) + sectionInsets.left + sectionInsets.right
         let cellViewSize = (collectionView.frame.size.width - space) / 2.0
-        imageSize = CGSize(width: cellViewSize, height: cellViewSize)
+        imageSize = CGSize(width: cellViewSize - 10, height: cellViewSize - 10)
         return imageSize
     }
     

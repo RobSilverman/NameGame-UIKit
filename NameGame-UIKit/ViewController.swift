@@ -104,6 +104,7 @@ class ViewController: UIViewController {
             NSLayoutConstraint.deactivate(landscapeConstraints)
             NSLayoutConstraint.activate(portraitConstraints)
         }
+        view.layoutSubviews()
     }
 
 }

@@ -28,12 +28,25 @@ class ViewController: UIViewController {
         instructionLabel.translatesAutoresizingMaskIntoConstraints = false
         practiceModeButton.translatesAutoresizingMaskIntoConstraints = false
         timedModeButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        drawGradient()
     }
     
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(true)
             navigationController?.setNavigationBarHidden(true, animated: false)
         }
+    
+    func drawGradient() {
+        let gradient = CAGradientLayer()
+        gradient.frame = targetImage.frame
+        
+        guard let targetColorTop = UIColor(named: "TargetColorTop"), let targetColorBottom = UIColor(named: "TargetColorBottom") else { return }
+        gradient.colors = [targetColorTop, targetColorBottom]
+        gradient.locations = [0.0, 1.0]
+        
+        targetImage.layer.addSublayer(gradient)
+    }
 
 }
 

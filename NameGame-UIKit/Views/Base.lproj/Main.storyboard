@@ -60,9 +60,10 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try matching the WillowTree employee to their photo" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCo-3H-2Nc">
-                                <rect key="frame" x="59" y="664.33333333333337" width="310" height="40.666666666666629"/>
+                                <rect key="frame" x="73.666666666666686" y="677" width="281" height="83"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="310" id="5Db-tL-aXs"/>
+                                    <constraint firstAttribute="width" constant="281" id="5Db-tL-aXs"/>
+                                    <constraint firstAttribute="height" constant="83" id="bCv-an-jIK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -111,7 +112,7 @@
                             <constraint firstItem="hrL-hV-nPw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Gg5-8y-JAO"/>
                             <constraint firstItem="iZe-7w-4yp" firstAttribute="centerY" secondItem="hrL-hV-nPw" secondAttribute="centerY" id="Ii5-bN-xLB"/>
                             <constraint firstItem="iZe-7w-4yp" firstAttribute="centerY" secondItem="hrL-hV-nPw" secondAttribute="centerY" id="IrG-Ob-ULn"/>
-                            <constraint firstItem="af1-NF-ZS0" firstAttribute="top" secondItem="qCo-3H-2Nc" secondAttribute="bottom" constant="67" id="JnV-nS-jua"/>
+                            <constraint firstItem="af1-NF-ZS0" firstAttribute="top" secondItem="qCo-3H-2Nc" secondAttribute="bottom" constant="12" id="JnV-nS-jua"/>
                             <constraint firstItem="hrL-hV-nPw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Ljw-ed-9bh">
                                 <variation key="heightClass=compact" constant="-50"/>
                             </constraint>

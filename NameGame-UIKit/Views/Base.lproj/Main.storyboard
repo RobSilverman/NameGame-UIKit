@@ -105,12 +105,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iY9-5f-9N1">
-                                <rect key="frame" x="10" y="118" width="394" height="41"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="06I-wR-fMD">
                                 <rect key="frame" x="0.0" y="183" width="414" height="679"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -168,6 +162,12 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iY9-5f-9N1">
+                                <rect key="frame" x="10" y="118" width="394" height="41"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tfS-T6-eD1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -176,11 +176,43 @@
                             <constraint firstItem="iY9-5f-9N1" firstAttribute="leading" secondItem="tfS-T6-eD1" secondAttribute="leading" constant="10" id="5WC-TY-Ibc"/>
                             <constraint firstItem="06I-wR-fMD" firstAttribute="leading" secondItem="tfS-T6-eD1" secondAttribute="leading" id="5qe-LA-nAO"/>
                             <constraint firstItem="06I-wR-fMD" firstAttribute="top" secondItem="iY9-5f-9N1" secondAttribute="bottom" constant="24" id="8ix-zQ-P8F"/>
+                            <constraint firstItem="06I-wR-fMD" firstAttribute="leading" secondItem="iY9-5f-9N1" secondAttribute="trailing" constant="102.5" id="BAy-65-9is">
+                                <variation key="heightClass=compact" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="iY9-5f-9N1" firstAttribute="top" secondItem="tfS-T6-eD1" secondAttribute="top" constant="95" id="Bvm-QB-QJP">
+                                <variation key="heightClass=compact" constant="70"/>
+                            </constraint>
+                            <constraint firstItem="iY9-5f-9N1" firstAttribute="leading" secondItem="tfS-T6-eD1" secondAttribute="leading" constant="40" id="IIP-6R-8Qa"/>
                             <constraint firstItem="iY9-5f-9N1" firstAttribute="top" secondItem="tfS-T6-eD1" secondAttribute="top" constant="30" id="Wid-Dz-TGm"/>
                             <constraint firstItem="tfS-T6-eD1" firstAttribute="trailing" secondItem="06I-wR-fMD" secondAttribute="trailing" id="axS-YG-Tw7"/>
+                            <constraint firstItem="06I-wR-fMD" firstAttribute="top" secondItem="tfS-T6-eD1" secondAttribute="top" constant="95" id="csO-rR-JLa">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="iY9-5f-9N1" firstAttribute="centerX" secondItem="tfS-T6-eD1" secondAttribute="centerX" id="dvC-Xj-vTa"/>
                             <constraint firstItem="tfS-T6-eD1" firstAttribute="trailing" secondItem="iY9-5f-9N1" secondAttribute="trailing" constant="10" id="oKb-48-ulT"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Bvm-QB-QJP"/>
+                                <exclude reference="IIP-6R-8Qa"/>
+                                <exclude reference="BAy-65-9is"/>
+                                <exclude reference="csO-rR-JLa"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="oKb-48-ulT"/>
+                                <exclude reference="5WC-TY-Ibc"/>
+                                <include reference="Bvm-QB-QJP"/>
+                                <include reference="IIP-6R-8Qa"/>
+                                <exclude reference="Wid-Dz-TGm"/>
+                                <exclude reference="dvC-Xj-vTa"/>
+                                <exclude reference="5qe-LA-nAO"/>
+                                <exclude reference="8ix-zQ-P8F"/>
+                                <include reference="BAy-65-9is"/>
+                                <include reference="csO-rR-JLa"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Practice Mode" id="Dec-Nx-QSG"/>
                     <connections>
@@ -190,7 +222,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vbb-Sx-ziN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2038" y="-165"/>
+            <point key="canvasLocation" x="2037.7232142857142" y="-165.21739130434784"/>
         </scene>
         <!--Timed Mode-->
         <scene sceneID="sUW-pb-yFg">
@@ -200,7 +232,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qgj-Go-hPI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qgj-Go-hPI">
                                 <rect key="frame" x="10" y="118" width="394" height="41"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <nil key="textColor"/>
@@ -276,16 +308,52 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="QHF-LD-UP3" firstAttribute="trailing" secondItem="fJU-4W-EC3" secondAttribute="trailing" constant="22" id="4Hk-Fv-Bff"/>
-                            <constraint firstItem="Qgj-Go-hPI" firstAttribute="top" secondItem="QHF-LD-UP3" secondAttribute="top" constant="30" id="DAR-qQ-vn0"/>
+                            <constraint firstItem="Qgj-Go-hPI" firstAttribute="leading" secondItem="QHF-LD-UP3" secondAttribute="leading" constant="340.5" id="83t-tI-X2R">
+                                <variation key="heightClass=compact" constant="40"/>
+                            </constraint>
+                            <constraint firstItem="Qgj-Go-hPI" firstAttribute="top" secondItem="QHF-LD-UP3" secondAttribute="top" constant="30" id="DAR-qQ-vn0">
+                                <variation key="heightClass=compact" constant="75"/>
+                            </constraint>
                             <constraint firstItem="QHF-LD-UP3" firstAttribute="trailing" secondItem="GlF-JT-sHb" secondAttribute="trailing" id="LaR-3X-vpu"/>
                             <constraint firstItem="Qgj-Go-hPI" firstAttribute="leading" secondItem="QHF-LD-UP3" secondAttribute="leading" constant="10" id="OYV-io-01L"/>
                             <constraint firstItem="GlF-JT-sHb" firstAttribute="leading" secondItem="QHF-LD-UP3" secondAttribute="leading" id="Ua0-7m-cDB"/>
                             <constraint firstItem="fJU-4W-EC3" firstAttribute="top" secondItem="QHF-LD-UP3" secondAttribute="top" constant="22" id="YvI-u3-sAd"/>
                             <constraint firstItem="QHF-LD-UP3" firstAttribute="trailing" secondItem="Qgj-Go-hPI" secondAttribute="trailing" constant="10" id="ada-N2-VcY"/>
+                            <constraint firstItem="GlF-JT-sHb" firstAttribute="leading" secondItem="Qgj-Go-hPI" secondAttribute="trailing" constant="-223.5" id="lf7-WI-8fk">
+                                <variation key="heightClass=compact" constant="50"/>
+                            </constraint>
                             <constraint firstItem="QHF-LD-UP3" firstAttribute="bottom" secondItem="GlF-JT-sHb" secondAttribute="bottom" id="lrL-NV-kiv"/>
+                            <constraint firstItem="fJU-4W-EC3" firstAttribute="leading" secondItem="QHF-LD-UP3" secondAttribute="leading" constant="764" id="pIW-XT-DDI">
+                                <variation key="heightClass=compact" constant="22"/>
+                            </constraint>
+                            <constraint firstItem="GlF-JT-sHb" firstAttribute="top" secondItem="QHF-LD-UP3" secondAttribute="top" constant="95" id="sK0-SP-7W5">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="Qgj-Go-hPI" firstAttribute="centerX" secondItem="QHF-LD-UP3" secondAttribute="centerX" id="tDm-S3-88O"/>
                             <constraint firstItem="GlF-JT-sHb" firstAttribute="top" secondItem="Qgj-Go-hPI" secondAttribute="bottom" constant="24" id="xsc-ak-g2Q"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="83t-tI-X2R"/>
+                                <exclude reference="lf7-WI-8fk"/>
+                                <exclude reference="sK0-SP-7W5"/>
+                                <exclude reference="pIW-XT-DDI"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="4Hk-Fv-Bff"/>
+                                <exclude reference="ada-N2-VcY"/>
+                                <include reference="83t-tI-X2R"/>
+                                <exclude reference="OYV-io-01L"/>
+                                <exclude reference="tDm-S3-88O"/>
+                                <exclude reference="Ua0-7m-cDB"/>
+                                <include reference="lf7-WI-8fk"/>
+                                <include reference="sK0-SP-7W5"/>
+                                <exclude reference="xsc-ak-g2Q"/>
+                                <include reference="pIW-XT-DDI"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Timed Mode" id="AS4-ko-SQF"/>
                     <connections>

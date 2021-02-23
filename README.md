@@ -6,7 +6,7 @@ This project was created as an interview project for [WillowTree](https://willow
 
 ## Usage
 
-This project was built in UIKit with no added packages. The designs require a SFSymbols 2 image, so it is targeting iOS 14.
+This project was built in UIKit with no added packages. The designs require a SFSymbols 2 image, so the build is targeting iOS 14.
 
 You can customize the length of Timed Mode games by changing the `gameLength` property in `TimedModeGame.swift`.
 
@@ -23,4 +23,4 @@ Rob Silverman - robert.silverman@hey.com
 
 ## Acknowledgements
 
-Thank you so much to Tucker, Joe, and Charlie for all your help and mentorship in getting me to this point in learning iOS development. 
+Thank you so much to Tucker, Joe, Charlie, and Jill for all your help and mentorship in getting me to this point in learning iOS development. 
